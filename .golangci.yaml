@@ -1,0 +1,19 @@
+version: "2"
+linters:
+  # https://golangci-lint.run/usage/linters/#enabled-by-default
+  enable:
+    - exhaustive
+    - exhaustruct
+    - goconst
+    - gocritic
+    - gosec
+    - nilnil
+    - revive
+    - whitespace
+  settings:
+    # https://golangci-lint.run/docs/linters/configuration/#gosec
+    gosec:
+      excludes:
+        - "G101" # required for testing with mock data
+        - "G401" # required for hashing the signature
+        - "G501" # required for hashing the signature
