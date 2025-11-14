@@ -1,10 +1,8 @@
 # lastfm-go
 
-A Go wrapper for the last.fm REST API (2.0) and modern alternative to [shkh/lastfm-go](https://github.com/shkh/lastfm-go).
-This library aims to be idomatic, simple, and powerful at the same time.
+[![Go Reference](https://pkg.go.dev/badge/github.com/p-mng/lastfm-go.svg)](https://pkg.go.dev/github.com/p-mng/lastfm-go) [![Go Report Card](https://goreportcard.com/badge/github.com/p-mng/lastfm-go)](https://goreportcard.com/report/github.com/p-mng/lastfm-go)
 
-> [!NOTE]
-> While the `go.mod` file contains a number of dependencies for testing and examples, the core library itself has no external dependencies.
+A Go wrapper for the last.fm REST API (2.0) and modern alternative to [shkh/lastfm-go](https://github.com/shkh/lastfm-go).
 
 ## Installation
 
@@ -14,9 +12,11 @@ go get -u github.com/p-mng/lastfm-go
 
 ## Usage
 
-Please refer to the provided examples for common use cases (e.g., authentication, scrobbling, and integration with other libraries).
+Please refer to the documentation and examples for common use cases (e.g., authentication, scrobbling, and integration with other libraries).
 
 ## Supported API endpoints
+
+The library supports all API endpoints.
 
 ### `album`
 
