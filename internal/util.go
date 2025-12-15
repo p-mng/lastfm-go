@@ -2,6 +2,7 @@
 package internal
 
 import (
+	//nolint:gosec
 	"crypto/md5"
 	"encoding/hex"
 	"errors"
@@ -38,6 +39,7 @@ func CreateSignature(params map[string]any, secret string) (string, error) {
 
 // EncodeSignature encodes the provided signature using MD5.
 func EncodeSignature(signature string) string {
+	//nolint:gosec
 	hash := md5.Sum([]byte(signature))
 	return hex.EncodeToString(hash[:])
 }
