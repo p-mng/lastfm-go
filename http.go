@@ -11,6 +11,7 @@ import (
 )
 
 // GetRequest sends an HTTP GET request to the last.fm API and decodes the response in the provided generic type.
+// The "method", "api_key", and "sk" parameters should not be included in params.
 //
 // https://www.last.fm/api/rest
 func GetRequest[T getError](
