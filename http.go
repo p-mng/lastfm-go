@@ -10,10 +10,10 @@ import (
 	"github.com/p-mng/lastfm-go/internal"
 )
 
-// getRequest sends an HTTP GET request to the last.fm API and decodes the response in the provided generic type.
+// GetRequest sends an HTTP GET request to the last.fm API and decodes the response in the provided generic type.
 //
 // https://www.last.fm/api/rest
-func getRequest[T getError](
+func GetRequest[T getError](
 	baseURL string,
 	params P,
 	method string,
@@ -59,10 +59,10 @@ func getRequest[T getError](
 	return decoded, nil
 }
 
-// postRequest sends an HTTP POST request to the last.fm API and decodes the response in the provided generic type.
+// PostRequest sends an HTTP POST request to the last.fm API and decodes the response in the provided generic type.
 //
 // https://www.last.fm/api/rest
-func postRequest[T getError](
+func PostRequest[T getError](
 	baseURL string,
 	params P,
 	method string,

@@ -4,12 +4,12 @@ package lastfmgo
 //
 // https://www.last.fm/api/show/geo.getTopArtists
 func (c Client) GeoGetTopArtists(params P) (GeoGetTopArtistsResponse, error) {
-	return getRequest[GeoGetTopArtistsResponse](c.baseURL, params, "geo.getTopArtists", c.apiKey, c.apiSecret, false)
+	return GetRequest[GeoGetTopArtistsResponse](c.baseURL, params, "geo.getTopArtists", c.apiKey, c.apiSecret, false)
 }
 
 // GeoGetTopTracks calls the geo.getTopTracks endpoint.
 //
 // https://www.last.fm/api/show/geo.getTopTracks
 func (c Client) GeoGetTopTracks(params P) (GeoGetTopTracksResponse, error) {
-	return getRequest[GeoGetTopTracksResponse](c.baseURL, params, "geo.getTopTracks", c.apiKey, c.apiSecret, false)
+	return GetRequest[GeoGetTopTracksResponse](c.baseURL, params, "geo.getTopTracks", c.apiKey, c.apiSecret, false)
 }

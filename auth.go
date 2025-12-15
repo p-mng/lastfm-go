@@ -9,7 +9,7 @@ import (
 //
 // https://www.last.fm/api/show/auth.getToken
 func (c Client) AuthGetToken() (AuthGetTokenResponse, error) {
-	return getRequest[AuthGetTokenResponse](c.baseURL, P{}, "auth.getToken", c.apiKey, c.apiSecret, false)
+	return GetRequest[AuthGetTokenResponse](c.baseURL, P{}, "auth.getToken", c.apiKey, c.apiSecret, false)
 }
 
 // AuthGetSession calls the auth.getSession endpoint.
@@ -17,7 +17,7 @@ func (c Client) AuthGetToken() (AuthGetTokenResponse, error) {
 //
 // https://www.last.fm/api/show/auth.getSession
 func (c Client) AuthGetSession(token string) (AuthGetSessionResponse, error) {
-	return getRequest[AuthGetSessionResponse](c.baseURL, P{
+	return GetRequest[AuthGetSessionResponse](c.baseURL, P{
 		"token": token,
 	}, "auth.getSession", c.apiKey, c.apiSecret, true)
 }
@@ -27,7 +27,7 @@ func (c Client) AuthGetSession(token string) (AuthGetSessionResponse, error) {
 //
 // https://www.last.fm/api/show/auth.getMobileSession
 func (c Client) AuthGetMobileSession() (AuthGetMobileSessionResponse, error) {
-	return postRequest[AuthGetMobileSessionResponse](c.baseURL, P{
+	return PostRequest[AuthGetMobileSessionResponse](c.baseURL, P{
 		"password": c.password,
 		"username": c.username,
 	}, "auth.getMobileSession", c.apiKey, c.apiSecret, true)
